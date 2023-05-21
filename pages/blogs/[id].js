@@ -57,7 +57,7 @@ function id({ data, content, id, headings, topics }) {
     <>
       <Head>
         <title>{data.Title}</title>
-        <meta name="title" content={data.Title} />
+        {/* <meta name="title" content={data.Title} />
         <meta name="description" content={data.Abstract} />
 
         <meta property="og:type" content="website" />
@@ -76,7 +76,7 @@ function id({ data, content, id, headings, topics }) {
         <meta
           property="twitter:image"
           content={`https://raw.githubusercontent.com/soumyajit4419/Bits-0f-C0de/main/public${data.HeaderImage}`}
-        />
+        /> */}
       </Head>
 
       <div className="min-h-screen relative bg-white dark:bg-gray-900">

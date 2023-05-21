@@ -15,6 +15,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.avatar{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 25px;
+}
 textarea::-webkit-scrollbar {
   width: 0;
 }

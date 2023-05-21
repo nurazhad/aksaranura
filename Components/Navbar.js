@@ -1,21 +1,18 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { BiTerminal } from "react-icons/bi";
 import { HiSun, HiMoon } from "react-icons/hi";
-import { CgUserlane } from "react-icons/cg";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { auth, provider } from "../Firebase/Firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { IoLogOutOutline } from "react-icons/io5";
-import { SiCodefactor } from "react-icons/si";
-import { IoMdArrowDropdown } from "react-icons/io";
 import Alert from "./Alert";
 import { useDispatch } from "react-redux";
 
 function Navbar({ topics }) {
   const [isMounted, setIsMounted] = useState(false);
   const [isLogin, setLogin] = useState(false);
+  const [signedName, setSignedName] = useState(false)
   const { theme, setTheme } = useTheme();
   const [viewAlert, setViewAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
@@ -28,6 +25,7 @@ function Navbar({ topics }) {
     if (user) {
       dispatch({ type: "STORE_USER", payload: user });
       setLogin(true);
+      setSignedName(user.photo)
     }
   }, []);
 
@@ -65,7 +63,6 @@ function Navbar({ topics }) {
 
         localStorage.setItem("user", JSON.stringify(userObj));
         dispatch({ type: "STORE_USER", payload: userObj });
-
         setLogin(true);
         setViewAlert(true);
         setAlertMessage(`Hello ${res.user.displayName}`);
@@ -108,13 +105,17 @@ function Navbar({ topics }) {
                 </span>
               </button>
 
-              <Link href="https://bit.ly/dyanurahman">
-                <a className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
-                  <span className="text-xl">
-                    <CgUserlane className="text-xl" />
+              {isLogin ? (
+                <span className="md:flex items-center">
+                  <span className="hidden md:block text-sm font-medium"><img className="avatar" src= {signedName}></img></span>
+                </span>
+              ) : (
+                <span className="md:flex items-center" onClick={handelSignIn}>
+                  <span className="hidden md:block text-sm font-medium">
+                    {}
                   </span>
-                </a>
-              </Link>
+                </span>
+              )}
 
               <button className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
                 {isLogin ? (
@@ -122,16 +123,21 @@ function Navbar({ topics }) {
                     className="md:flex items-center"
                     onClick={handelSignOut}
                   >
-                    <span className="hidden md:block text-sm font-medium">Sign Out</span>
+                    <span className="hidden md:block text-sm font-medium">
+                    </span>
                     <IoLogOutOutline className="text-xl mx-1" />
                   </span>
                 ) : (
                   <span className="md:flex items-center" onClick={handelSignIn}>
-                    <span className="hidden md:block text-sm font-medium"> Sign In</span>
+                    <span className="hidden md:block text-sm font-medium">
+                      {" "}
+                      Sign In
+                    </span>
                     <AiOutlineGoogle className="text-xl mx-1" />
                   </span>
                 )}
               </button>
+              
             </div>
           </div>
         </div>

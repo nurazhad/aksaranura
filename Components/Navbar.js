@@ -137,7 +137,7 @@ function Navbar({ topics }) {
                 </span>
               </button>
 
-              <Link href="/about">
+              <Link href="https://bit.ly/dyanurahman">
                 <a className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
                   <span className="text-xl">
                     <CgUserlane className="text-xl" />

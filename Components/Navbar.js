@@ -87,40 +87,11 @@ function Navbar({ topics }) {
             <div className="flex">
               <Link href="/">
                 <a className="flex items-center hover:text-indigo-600 text-gray-800 dark:text-gray-50">
-                  <span className="text-xl font-semibold">
-                    <BiTerminal className="text-xl" />
-                  </span>
                   <span className="mx-1 font-semibold text-base md:text-base">
-                    Latest
+                    AKSARA NURA
                   </span>
                 </a>
               </Link>
-
-              <div className="dropdown inline-block relative mx-2">
-                <a className="flex items-center hover:text-indigo-600 text-gray-800 dark:text-gray-50 mx-6 cursor-pointer">
-                  <span className="text-xl font-semibold">
-                    <SiCodefactor className="text-sm" />
-                  </span>
-                  <span className="mx-1 font-semibold text-base md:text-base">
-                    Posts
-                  </span>
-
-                  <span className="text-xl font-semibold">
-                    <IoMdArrowDropdown className="text-xl" />
-                  </span>
-                </a>
-                <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 bg-white dark:bg-dark w-40 pt-6 rounded-xl left-1/3">
-                  {topics.map((topic) => (
-                    <Link href={`/topic/${topic}`} key={topic}>
-                      <li className="cursor-pointer">
-                        <a className="rounded-xl bg-white dark:bg-dark text-gray-800 dark:text-gray-50 py-2 px-4 block whitespace-no-wrap">
-                          {topic}
-                        </a>
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
             </div>
 
             <div className="flex items-center -mx-3">

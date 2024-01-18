@@ -4,8 +4,8 @@ import Toc from "./Toc";
 
 function BlogInner({ data, content, headings }) {
   return (
-    <div className="mx-auto flex justify-center max-w-screen-xl px-6">
-      <div className="rounded-lg shadow-lg bg-white dark:bg-gray-900 pb-8">
+    <div className="mx-auto flex justify-center max-w-screen-xl px-6 bg-white dark:bg-[#002F31]">
+      <div className="rounded-lg shadow-lg bg-white dark:bg-[#002F31] pb-8">
         <img
           className="object-cover w-full h-72"
           src={data.HeaderImage}

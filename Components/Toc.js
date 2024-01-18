@@ -13,7 +13,7 @@ function Toc({ headings }) {
             className="mt-4 text-lg text-gray-700 dark:text-gray-400"
             style={{
               paddingLeft: heading.level === 3 ? "1rem" : "",
-              color: heading.id === active ? "#6366f1" : "",
+              color: heading.id === active ? "#002F31" : "",
             }}
             onClick={(e) => {
               setActive(heading.id);

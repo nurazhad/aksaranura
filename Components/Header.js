@@ -16,13 +16,13 @@ function Header({ topic, topicName, topicCount }) {
           <div className="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
 
             <h1 className="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight dark:text-gray-50">
-              <span>Berbagi</span>{" "}
-              <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-blue-400 to-purple-500 lg:inline">
-                Aksara
+              <span>Learn</span>{" "}
+              <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-yellow-500 lg:inline">
+                More
               </span>{" "}
-              <span>Berbagi </span>{" "}
-              <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-blue-400 to-purple-500 lg:inline">
-                Rasa
+              <span>Earn </span>{" "}
+              <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-yellow-500 lg:inline">
+                More
               </span>{" "}
             </h1>
           </div>

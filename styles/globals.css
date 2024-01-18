@@ -5,7 +5,7 @@
 @layer utilities {
   @variants dark {
     .bg-dark {
-      background: #070c17db;
+      background: #002F31;
       backdrop-filter: blur(3px);
     }
   }
@@ -39,7 +39,7 @@ textarea::-webkit-scrollbar {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #6264f3 !important;
+  background: #033031 !important;
   border-radius: 5px !important;
 }
 

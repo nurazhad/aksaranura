@@ -78,14 +78,14 @@ function Navbar({ topics }) {
   return (
     <>
       <Alert show={viewAlert} type="success" message={alertMessage} />
-      <header className="fixed w-full border-t-4 bg-white dark:bg-dark border-indigo-600 dark:border-indigo-900 shadow dark:shadow-2 z-50">
+      <header className="fixed w-full border-t-4 bg-white dark:bg-dark border-teal-600 dark:border-teal-900 shadow dark:shadow-2 z-50">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex">
               <Link href="/">
-                <a className="flex items-center hover:text-indigo-600 text-gray-800 dark:text-gray-50">
+                <a className="flex items-center hover:text-teal-600 text-gray-800 dark:text-gray-50">
                   <span className="mx-1 font-semibold text-base md:text-base">
-                    AKSARA NURA
+                    AVOCADEV.ID
                   </span>
                 </a>
               </Link>
@@ -93,7 +93,7 @@ function Navbar({ topics }) {
 
             <div className="flex items-center -mx-3">
               <button
-                className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50"
+                className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-teal-600 dark:text-gray-50"
                 onClick={toggleTheme}
               >
                 <span className="text-lg">
@@ -117,7 +117,7 @@ function Navbar({ topics }) {
                 </span>
               )}
 
-              <button className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
+              <button className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-teal-600 dark:text-gray-50">
                 {isLogin ? (
                   <span
                     className="md:flex items-center"
